@@ -16,10 +16,10 @@
         </Console>
  
         <!-- the appenders for server 1 -->
-        <File name="appender-cos-all" fileName="${filename-server1-all}" append="true">
+        <File name="appender-cos-all" fileName="${filename-cos-all}" append="true">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
         </File>
-        <File name="appender-cos-error" fileName="${filename-server1-error}" append="true">
+        <File name="appender-cos-error" fileName="${filename-cos-error}" append="true">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
         </File>
  	 	<File name="appender-cos-db" fileName="${filename-cos-db}" append="true">

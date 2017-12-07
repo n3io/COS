@@ -3,3 +3,16 @@
 21:04:12.971 [main] DEBUG com.cvs.digital.automation.cos.application - Logging in user han with id 8 
 21:06:21.496 [main] DEBUG com.cvs.digital.automation.cos.application - Logging in user luke with id 1 
 21:07:06.707 [main] WARN  com.cvs.digital.automation.cos.application - Logging in user anakin with id 0 
+21:41:49.881 [main] DEBUG com.cvs.digital.automation.cos.application - Logging in user chewie with id 9 
+22:26:23.864 [main] DEBUG com.cvs.digital.automation.cos.application - Logging in user mace with id 4 
+22:26:25.513 [main] WARN  com.cvs.digital.automation.cos.application - Logging in user jarjar with id 7 
+22:26:25.948 [main] DEBUG com.cvs.digital.automation.cos.application - Logging in user jarjar with id 7 
+22:26:27.623 [main] DEBUG com.cvs.digital.automation.cos.application - Logging in user anakin with id 0 
+22:26:28.267 [main] ERROR com.cvs.digital.automation.cos.application - Logging in user darth with id 3 
+22:26:30.004 [main] WARN  com.cvs.digital.automation.cos.application - Logging in user yoda with id 6 
+22:26:33.995 [main] INFO  com.cvs.digital.automation.cos.application - Logging in user luke with id 1 
+22:26:35.675 [main] INFO  com.cvs.digital.automation.cos.application - Logging in user mace with id 4 
+22:26:36.639 [main] ERROR com.cvs.digital.automation.cos.application - Logging in user han with id 8 
+22:26:37.978 [main] DEBUG com.cvs.digital.automation.cos.application - Logging in user padme with id 5 
+22:26:38.499 [main] INFO  com.cvs.digital.automation.cos.application - Logging in user darth with id 3 
+22:26:40.174 [main] INFO  com.cvs.digital.automation.cos.application - Logging in user chewie with id 9 
