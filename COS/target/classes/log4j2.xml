@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="30" status="debug">
+    <!-- monitorInterval: automatic reload every 30sec on changes -->
+    <!-- status: log4j2 internal logging (not for the app) -->
+ 
+    <Properties>
+        <Property name="filename-cos-all">logs/cos-all.log</Property>
+        <Property name="filename-cos-error">logs/cos-error.log</Property>
+        <Property name="filename-cos-db">logs/cos-db.log</Property>
+    </Properties>
+ 
+    <Appenders>
+        <!-- the standard-console-appender -->
+        <Console name="appender-Console-all" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+ 
+        <!-- the appenders for server 1 -->
+        <File name="appender-cos-all" fileName="${filename-server1-all}" append="true">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </File>
+        <File name="appender-cos-error" fileName="${filename-server1-error}" append="true">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </File>
+ 	 	<File name="appender-cos-db" fileName="${filename-cos-db}" append="true">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </File>
+    </Appenders>
+ 
+ 
+    <Loggers>
+        <!-- Every configuration must have a root logger. If one is not configured the default root LoggerConfig is ERROR with Console appender attached. -->
+        <Root level="DEBUG">
+            <AppenderRef ref="appender-Console-all" />
+        </Root>
+ 
+        <!-- application-loggers -->
+        <!-- additivity means, that parent-logger (in every case the root-logger) will also get the chance to log this stuff -->
+        <Logger name="com.cvs.digital.automation.cos.application" additivity="TRUE" level="ALL">
+            <AppenderRef ref="appender-cos-all" level="ALL" />
+            <AppenderRef ref="appender-cos-error" level="ERROR" />
+        </Logger>
+        
+ 		<!-- db-loggers -->
+        <!-- additivity means, that parent-logger (in every case the root-logger) will also get the chance to log this stuff -->
+        <Logger name="com.cvs.digital.automation.cos.database" additivity="TRUE" level="ALL">
+            <AppenderRef ref="appender-cos-db" level="ALL" />
+        </Logger>
+       
+    </Loggers>
+</Configuration>
