@@ -1,6 +1,11 @@
 package com.cvs.digital.automation.repository;
 
-public interface Mapper<From, To> {
-	To map(From from);
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.cvs.digital.automation.entity.Entity;
+
+public interface Mapper {
+	Entity map(ResultSet  from)throws SQLException;
 
 }

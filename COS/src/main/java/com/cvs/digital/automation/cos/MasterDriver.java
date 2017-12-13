@@ -1,13 +1,14 @@
 package com.cvs.digital.automation.cos;
 
+import com.cvs.digital.automation.cos.selenium.SeleniumDriver;
+
 public class MasterDriver{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Git");
-		System.out.println("Git-leve2");
-		System.out.println("Git-leve3");
 		
+		SeleniumDriver sd = new SeleniumDriver();
+		sd.execute();
 	}
 
 }
