@@ -10,7 +10,7 @@ public class SeleniumDriver {
 		String accessDbFilePath = "C:/Users/kalidass/git/COS/COS/cos.accdb";
 	
 		Repository or = new AccessRepository(accessDbFilePath);
-		Module module =  or.getModule(1);
+		Module module =  or.getModule("Login");
 		System.out.println(module.getModuleName());
 	}
 }

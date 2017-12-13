@@ -13,7 +13,7 @@ public class ModuleByIdSpecification implements SqlSpecification {
     @Override
     public String toSqlQuery() {
         String sql = String.format(
-                "SELECT * FROM %1$s WHERE `%2$s` = %3$d';",
+                "SELECT * FROM %1$s WHERE %2$s = %3$d;",
                 ModuleTable.TABLE_NAME,
                 ModuleTable.FIELD_MODULE_ID,
                 id

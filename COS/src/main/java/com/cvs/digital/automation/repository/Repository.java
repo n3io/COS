@@ -4,5 +4,6 @@ import com.cvs.digital.automation.entity.Module;
 
 public interface Repository {
 
-	Module getModule(int moduleID);
+	Module getModule(final int moduleID);
+	Module getModule(final String moduleName);
 }
